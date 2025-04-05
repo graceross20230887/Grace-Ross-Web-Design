@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Order - Kneads and Nibbles</title>
+    <link rel="stylesheet" href="pages_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span>Kneads</span> and <span>Nibbles</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="Contactus.html">Contact Us</a></li>
+                <li><a href="productspage.html">Products</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="customize-section">
+            <h2>Customize Your Order</h2>
+            <form action="Checkout.html" method="POST">
+                <!-- Product Type: Cakes -->
+                <div class="product-option">
+                    <h3>Cakes</h3>
+                    <label for="cake-design">Select Cake Design✨:</label>
+                    <select id="cake-design" name="cake-design">
+                        <option value="classic">Classic</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday</option>
+                    </select>
+
+                    <label for="cake-quantity">Quantity:</label>
+                    <input type="number" id="cake-quantity" name="cake-quantity" min="1" max="10" value="1">
+                </div>
+
+                <!-- Product Type: Cookies -->
+                <div class="product-option">
+                    <h3>Cookies</h3>
+                    <label for="cookie-design">Select Cookie Design🍪:</label>
+                    <select id="cookie-design" name="cookie-design">
+                        <option value="chocolate-chip">Chocolate Chip</option>
+                        <option value="sugar">Sugar</option>
+                        <option value="gingerbread">Gingerbread</option>
+                    </select>
+
+                    <label for="cookie-quantity">Quantity:</label>
+                    <input type="number" id="cookie-quantity" name="cookie-quantity" min="1" max="20" value="1">
+                </div>
+
+<!-- Product Type: Gourmet items -->
+                <div class="product-option">
+                    <h3>Gourmet✨</h3>
+                    <label for="fancy-design">Select fancy Design:</label>
+                    <select id="fancy-design" name="fancy-design">
+                        <option value="classic">Classic</option>
+                        <option value="extravagant">Extravagant</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+
+                    <label for="gourmet-quantity">Quantity:</label>
+                    <input type="number" id="gourmet-quantity" name="gourmet-quantity" min="1" max="10" value="1">
+                </div>
+
+                <div class="product-summary">
+                    <button type="submit" class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kneads and Nibbles. All rights reserved.</p>
+    </footer>
+</body>
+</html>

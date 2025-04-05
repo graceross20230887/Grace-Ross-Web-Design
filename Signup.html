@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kneads and Nibbles</title>
+    <link rel="stylesheet" href="pages_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span>Kneads</span> and <span>Nibbles</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Signup.html">Sign Up</a></li>
+                <li><a href="Contactus.html">Contact Us</a></li>
+                <li><a href="productspage.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup">
+            <h2>Sign Up to Kneads and Nibbles</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <label for="membership">Select Membership Type</label>
+                <select id="membership" name="membership" required>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                </select>
+
+                <label for="comment">Leave a Comment</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="We would love to hear from you!"></textarea>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kneads and Nibbles. All rights reserved.</p>
+    </footer>
+</body>
+</html>
