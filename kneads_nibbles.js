@@ -14,7 +14,20 @@
         localStorage.setItem('cookieDesign', cookieDesign);
         localStorage.setItem('cookieQuantity', cookieQuantity);
 
-        // Redirect to checkout page
-        window.location.href = "Checkout.html";
-    };
+<script>
+function saveOrder() {
+  const cake = document.getElementById("cake").value;
+  const cakeQty = document.getElementById("cakeQty").value;
+  const cookie = document.getElementById("cookie").value;
+  const cookieQty = document.getElementById("cookieQty").value;
+
+  localStorage.setItem("cake", cake);
+  localStorage.setItem("cakeQty", cakeQty);
+  localStorage.setItem("cookie", cookie);
+  localStorage.setItem("cookieQty", cookieQty);
+
+  // Redirect to checkout
+  window.location.href = "Checkout.html";
+}
 </script>
+       

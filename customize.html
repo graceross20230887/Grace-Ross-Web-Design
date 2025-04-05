@@ -9,9 +9,11 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1><span>Kneads</span> and <span>Nibbles</span></h1>
-        </div>
+        <img src="https://sdmntpreastus2.oaiusercontent.com/files/00000000-1288-51f6-9272-bdf739cfbd1c/raw?se=2025-04-05T21%3A07%3A39Z&sp=r&sv=2024-08-04&sr=b&scid=9a3da91e-5248-5414-b94c-6ca42093c056&skoid=3f3a9132-9530-48ef-96b7-fee5a811733f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-05T08%3A06%3A27Z&ske=2025-04-06T08%3A06%3A27Z&sks=b&skv=2024-08-04&sig=groqnnEUVMEyT6tyRgHsR/S4jxWKH%2BE/JnRTkxiW9bQ%3D" =atl "My Image"="Kneads and Nibbles Logo" class="logo">
+
+<h2><span>Kneads</
+span> and <span>Nibbles</ span></h2>
+</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,7 +27,25 @@
 
     <main>
         <section class="customize-section">
-            <h2>Customize Your Order</h2>
+            <h2>Customize Your Order</h2>  
+
+<script>
+function saveOrder() {
+  const cake = document.getElementById("cake").value;
+  const cakeQty = document.getElementById("cakeQty").value;
+  const cookie = document.getElementById("cookie").value;
+  const cookieQty = document.getElementById("cookieQty").value;
+
+  localStorage.setItem("cake", cake);
+  localStorage.setItem("cakeQty", cakeQty);
+  localStorage.setItem("cookie", cookie);
+  localStorage.setItem("cookieQty", cookieQty);
+
+  // Redirect to checkout
+  window.location.href = "Checkout.html";
+}
+</script>
+
             <form action="Checkout.html" method="POST">
                 <!-- Product Type: Cakes -->
                 <div class="product-option">
@@ -38,7 +58,21 @@
                     </select>
 
                     <label for="cake-quantity">Quantity:</label>
-                    <input type="number" id="cake-quantity" name="cake-quantity" min="1" max="10" value="1">
+                    <input type="number" id="cake-quantity" name="cake-quantity" min="0" max="10" value="0">
+                </div>
+
+<!-- Product Type: Doughnuts -->
+                <div class="product-option">
+                    <h3>Doughnuts</h3>
+                    <label for="cookie-design">Select Doughnuts Desigs🍩:</label>
+                    <select id="doughnut-design" name="doughnuts-design">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="sugar">Sugar</option>
+                        <option value="Vanilla">Vanilla</option>
+                    </select>
+
+                    <label for="doughnut-quantity">Quantity:</label>
+                    <input type="number" id="doughnut-quantity" name="doughnut-quantity" min="0" max="20" value="0">
                 </div>
 
                 <!-- Product Type: Cookies -->
@@ -52,7 +86,21 @@
                     </select>
 
                     <label for="cookie-quantity">Quantity:</label>
-                    <input type="number" id="cookie-quantity" name="cookie-quantity" min="1" max="20" value="1">
+                    <input type="number" id="cookie-quantity" name="cookie-quantity" min="0" max="20" value="0">
+                </div>
+
+   <!-- Product Type: Sweet Treats -->
+                <div class="product-option">
+                    <h3>Sweet Treats</h3>
+                    <label for="treat-design">Select Sweet Treat Design🍬:</label>
+                    <select id="treat-design" name="treat-design">
+                        <option value="classic">Classic</option>
+                        <option value="sweet"> Sweet</option>
+                        <option value="sugar rush">Sugar Rush</option>
+                    </select>
+
+                    <label for="treat-quantity">Quantity:</label>
+                    <input type="number" id="treat-quantity" name="treat-quantity" min="0" max="20" value="0">
                 </div>
 
 <!-- Product Type: Gourmet items -->
@@ -66,11 +114,25 @@
                     </select>
 
                     <label for="gourmet-quantity">Quantity:</label>
-                    <input type="number" id="gourmet-quantity" name="gourmet-quantity" min="1" max="10" value="1">
+                    <input type="number" id="gourmet-quantity" name="gourmet-quantity" min="0" max="10" value="0">
                 </div>
 
+<!-- Product Type: Pastry items -->
+                <div class="product-option">
+                    <h3>Pastries✨</h3>
+                    <label for="fancy-design">Select fancy Design:</label>
+                    <select id="fancy-design" name="fancy-design">
+                        <option value="classic">Classic</option>
+                        <option value="extravagant">Extravagant</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+
+                    <label for="pastry-quantity">Quantity:</label>
+                    <input type="number" id="pastry-quantity" name="pastry-quantity" min="0" max="10" value="0">
+                </div>
                 <div class="product-summary">
-                    <button type="submit" class="checkout-btn">Proceed to Checkout</button>
+                    <button type="submit" class="checkout-btn"> <li><a href="Checkout.html">Checkout</a></li>
+            </ul>Proceed to Checkout</button>
                 </div>
             </form>
         </section>
